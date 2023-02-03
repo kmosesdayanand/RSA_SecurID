@@ -181,11 +181,13 @@ Dec 22 12:44:05 ip-10-0-20-76 2022-12-22 12:44:05,338, ip-10-0-20-76.ap-south-1.
 ```
   
   <li><b>Log Transmission</b></li>
+	
 1. Install Splunk Enterprise Edition on the Linux machine which is acting as Rsyslog Server.
 2. Install Splunk addon for RSA SecurID on the Splunk Instance.
 3. Enable UDP port on the Splunk.
 4. In the backend navigate to <b>/opt/splunk/etc/apps/Splunk_TA_rsa-securid/local.</b> 
 5. Create an inputs.conf file and add the following lines.
+	
  ```
   [udp://514]
 connection_host = ip 
@@ -193,6 +195,7 @@ index = <index name>
 sourcetype = rsa:securid:syslog  
 
  ```
+	
 6. Save the inputs.conf
 7. Once you logon to splunk after restart you should be able to find all the data which is fully parsed related to RSA Authentication Manager.
 8. You will also be seeing the internal logs of the Linux machine as well as RSA machine.
