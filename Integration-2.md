@@ -2,9 +2,13 @@
 ### 1 Introduction
  
  
-**Purpose:** The purpose of this document is to introduce auditing for RSA Authentication Manager, followed by a generalized guide, including commands and scripts (if any), on how to implement auditing functionality.
+**Purpose:** 
+
+The purpose of this document is to introduce auditing for RSA Authentication Manager, followed by a generalized guide, including commands and scripts (if any), on how to implement auditing functionality.
     
-**Scope:** RSA Authentication Manager does come with logs that can be used for auditing; however, the agency will need to perform certain specific configuration steps to enable the auditing and/or to pipe the data. The guidelines within this document provide a basic and pre-configured script for RSA Authentication Manager.
+**Scope:**
+
+RSA Authentication Manager does come with logs that can be used for auditing; however, the agency will need to perform certain specific configuration steps to enable the auditing and/or to pipe the data. The guidelines within this document provide a basic and pre-configured script for RSA Authentication Manager.
  Also, please note that any screenshots provided are only for reference purposes and should be used only for the same.  The output of commands may vary in format for different environments or platforms, and as such, it is recommended that the user of this guide refer to the platform specific documentation for exact outputs.
  
  
@@ -13,6 +17,7 @@
 RSA Authentication Manager auditing is a thorough inspection of actions performed by RSA  Authentication Manager’s admin, users and other privileged users . It is done to assure that security is highly implemented on the data and the utilised systems. Auditing can be used to scrutinize individual actions, such as user deletion and modification of configuration; it could even provide a detailed report based on combinations of data which includes username, application, or time stamp, for example. As such, proper auditing of RSA Authentication Manager will enable strong security being in place and a control to monitor for possible security breaches. 
  
 **Why Audit?**
+
 Auditing is generally performed to ensure any of the following:
 <ul>
 	<li>Enable accountability for actions.</li>
@@ -246,8 +251,8 @@ FORMAT = indexQueue
   <li><b>Reference</b></li>
   <ul>
 <li>Audit Log Configuration:  https://community.rsa.com/t5/securid-authentication-manager/configure-logging/ta-p/629844</li>
-<li>List of Actions that can be performed by user: https://community.rsa.com/t5/securid-authentication-manager/rsa-authentication-manager-log-messages/ta-p/630160
-Splunk Add-on for RSA SecurID: https://docs.splunk.com/Documentation/AddOns/released/RSASecurID/About</li>
+<li>List of Actions that can be performed by user: https://community.rsa.com/t5/securid-authentication-manager/rsa-authentication-manager-log-messages/ta-p/630160</li>
+<li>Splunk Add-on for RSA SecurID: https://docs.splunk.com/Documentation/AddOns/released/RSASecurID/About</li>
   </ul>
   
   </ol>
