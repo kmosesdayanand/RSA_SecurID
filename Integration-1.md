@@ -2,9 +2,13 @@
 ### 1 Introduction
  
  
-**Purpose:** The purpose of this document is to introduce auditing for RSA Authentication Manager, followed by a generalized guide, including commands and scripts (if any), on how to implement auditing functionality.
+**Purpose:** 
+
+The purpose of this document is to introduce auditing for RSA Authentication Manager, followed by a generalized guide, including commands and scripts (if any), on how to implement auditing functionality.
     
-**Scope:** RSA Authentication Manager does come with logs that can be used for auditing; however, the agency will need to perform certain specific configuration steps to enable the auditing and/or to pipe the data. The guidelines within this document provide a basic and pre-configured script for RSA Authentication Manager.
+**Scope:**
+
+RSA Authentication Manager does come with logs that can be used for auditing; however, the agency will need to perform certain specific configuration steps to enable the auditing and/or to pipe the data. The guidelines within this document provide a basic and pre-configured script for RSA Authentication Manager.
  Also, please note that any screenshots provided are only for reference purposes and should be used only for the same.  The output of commands may vary in format for different environments or platforms, and as such, it is recommended that the user of this guide refer to the platform specific documentation for exact outputs.
  
  
@@ -13,6 +17,7 @@
 RSA Authentication Manager auditing is a thorough inspection of actions performed by RSA  Authentication Manager’s admin, users and other privileged users . It is done to assure that security is highly implemented on the data and the utilised systems. Auditing can be used to scrutinize individual actions, such as user deletion and modification of configuration; it could even provide a detailed report based on combinations of data which includes username, application, or time stamp, for example. As such, proper auditing of RSA Authentication Manager will enable strong security being in place and a control to monitor for possible security breaches. 
  
 **Why Audit?**
+
 Auditing is generally performed to ensure any of the following:
 <ul>
 	<li>Enable accountability for actions.</li>
@@ -34,10 +39,13 @@ The following audit categories are being covered for this data source.
 · Authentication Logs of the Administrator, users, and other privileged users.
 · System logs like uptime, Session information and other server related data.
   <li><b>Specifications</b></li>
-	Hosting type	On-premises 
-	Software name	RSA Authentication Manager 
-	Software versions which have been tested	8.6
-	OS versions which have been tested	 
+  
+|                   Detail                 |            Info            | 
+| ---------------------------------------- |:--------------------------:| 
+| Hosting type                             | On-premises                | 
+| Software name                            | RSA Authentication Manager |
+| Software versions which have been tested | 8.6                        |
+
   
   <li><b>Audit events</b></li>
   
@@ -56,7 +64,7 @@ In order to access the data we need to hardcode the system to store logs into fi
  
 1. Go to Operations Console and navigate to Administration > Operating System Access and enable SSH.
 2. Now logon to the RSA using the Public IP in any SSH client using rsaadmin credentials that you have created during setup.
-3.  Now navigate to /opt/rsa/am/utils/ 
+3.  Now navigate to <b>/opt/rsa/am/utils/</b>
 4. Execute the following commands 
 		 <b>./rsautil store -a config_all ims.logging.audit.admin.datastore database,file.</b>
 5. You will be prompted for Operations Console username and password after you enter you should see a success message config_all
@@ -186,5 +194,5 @@ com.rsa.common.AuditLogFailureException: Failed to write to audit log.
 ## References
 <ul>
 <li>Audit Log Configuration:  https://community.rsa.com/t5/securid-knowledge-base/how-to-configure-rsa-authentication-manager-to-send-log-messages/ta-p/6449 </li>
-<li>List of Actions that can be performed by user: https://community.rsa.com/t5/securid-authentication-manager/rsa-authentication-manager-log-messages/ta-p/630160![image](https://user-images.githubusercontent.com/80450749/216566418-3903fdf3-7289-4c2d-acb9-1058519071d7.png)</li>
+<li>List of Actions that can be performed by user: https://community.rsa.com/t5/securid-authentication-manager/rsa-authentication-manager-log-messages/ta-p/630160</li>
 </ul>
